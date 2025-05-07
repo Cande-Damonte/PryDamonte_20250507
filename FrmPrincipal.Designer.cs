@@ -54,7 +54,7 @@
             this.CmbSuperHeroes.Name = "CmbSuperHeroes";
             this.CmbSuperHeroes.Size = new System.Drawing.Size(180, 28);
             this.CmbSuperHeroes.TabIndex = 1;
-          
+            this.CmbSuperHeroes.SelectedIndexChanged += new System.EventHandler(this.CmbSuperHeroes_SelectedIndexChanged);
             // 
             // imageList1
             // 
@@ -64,9 +64,10 @@
             // 
             // pctSuperheroe
             // 
-            this.pctSuperheroe.Location = new System.Drawing.Point(48, 96);
+            this.pctSuperheroe.Location = new System.Drawing.Point(36, 96);
             this.pctSuperheroe.Name = "pctSuperheroe";
-            this.pctSuperheroe.Size = new System.Drawing.Size(211, 133);
+            this.pctSuperheroe.Size = new System.Drawing.Size(247, 155);
+            this.pctSuperheroe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pctSuperheroe.TabIndex = 2;
             this.pctSuperheroe.TabStop = false;
             // 
@@ -80,7 +81,10 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Principal";
             this.Load += new System.EventHandler(this.FrmPrincipal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pctSuperheroe)).EndInit();

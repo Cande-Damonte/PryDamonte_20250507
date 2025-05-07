@@ -16,5 +16,16 @@ namespace PryDamonte_20250507
         {
             InitializeComponent();
         }
+
+
+
+        private void FrmPrincipal_Load(object sender, EventArgs e)
+        {
+            CmbSuperHeroes.Items.Add("Superman");
+            CmbSuperHeroes.Items.Add("Mujer Maravilla");
+            CmbSuperHeroes.Items.Add("Spiderman");
+        }
+
+
     }
 }

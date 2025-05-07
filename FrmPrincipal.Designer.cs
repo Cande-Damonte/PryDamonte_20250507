@@ -81,6 +81,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmPrincipal";
             this.Text = "Principal";
+            this.Load += new System.EventHandler(this.FrmPrincipal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pctSuperheroe)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -10,11 +10,6 @@ namespace PryDamonte_20250507
     public class ClsSuperheroes
     {
         
-         llenarCmbSuperheroe(ComboBox cmbSuperheroe)
-        {
-            ClsSuperheroes clsSuperheroes = new ClsSuperheroes();
 
-            cmbSuperheroe.Items.Add = "SuperMan";
-        }
     }
 }

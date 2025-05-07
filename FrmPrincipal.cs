@@ -16,5 +16,21 @@ namespace PryDamonte_20250507
         {
             InitializeComponent();
         }
+
+        public void llenarCmbSuperheroe(ComboBox CmbSuperHeroes)
+        {
+            ClsSuperheroes clsSuperheroes = new ClsSuperheroes();
+
+            CmbSuperHeroes.Items.Add = "SuperMan";
+            CmbSuperHeroes.Items.Add = "SpiderMan";
+            CmbSuperHeroes.Items.Add = "Mujer maravilla";
+        }
+
+        private void FrmPrincipal_Load(object sender, EventArgs e)
+        {
+            ClsSuperheroes clsSuperheroes = new ClsSuperheroes();
+            CargarTreeView();
+            conexion.listarContactos(dgvContactos);
+        }
     }
 }

@@ -4,9 +4,12 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace PryDamonte_20250507
 {
@@ -17,20 +20,28 @@ namespace PryDamonte_20250507
             InitializeComponent();
         }
 
-        public void llenarCmbSuperheroe(ComboBox CmbSuperHeroes)
+        private void btnCrear_Click(object sender, EventArgs e)
         {
-            ClsSuperheroes clsSuperheroes = new ClsSuperheroes();
+            string rutaArchivo = "nuevo_archivo.txt";
 
-            CmbSuperHeroes.Items.Add = "SuperMan";
-            CmbSuperHeroes.Items.Add = "SpiderMan";
-            CmbSuperHeroes.Items.Add = "Mujer maravilla";
-        }
+            try
+            {
 
-        private void FrmPrincipal_Load(object sender, EventArgs e)
-        {
-            ClsSuperheroes clsSuperheroes = new ClsSuperheroes();
-            CargarTreeView();
-            conexion.listarContactos(dgvContactos);
+                string destreza = numDestreza.ToString();
+                string fuerza = numFuerza.ToString();
+
+                string contenido = $"{destreza} {fuerza}";
+
+                File.WriteAllText(rutaArchivo, contenido);
+ 
+                File.CreateText(rutaArchivo).Close(); 
+
+                MessageBox.Show("El archivo ha sido creado.");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ocurrió un error al crear el archivo");
+            }
         }
     }
 }
